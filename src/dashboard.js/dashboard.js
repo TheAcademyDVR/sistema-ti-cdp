@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, Outlet } from 'react-router-dom'
 import 'bootstrap-icons/font/bootstrap-icons.css'
 
 
@@ -14,17 +14,17 @@ function Dashboard() {
                 </a>
                 <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
                     <li class="nav-item">
-                        <Link href="#" class="nav-link align-middle px-0 text-white">
+                        <Link to="/" class="nav-link align-middle px-0 text-white">
                             <i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline">Dashboard</span>
                         </Link>
                     </li>
                     <li>
-                        <Link href="#" data-bs-toggle="collapse" class="nav-link px-0 align-middle text-white">
+                        <Link to="/users" data-bs-toggle="collapse" class="nav-link px-0 align-middle text-white">
                             <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Usuarios</span> </Link>
                        
                     </li>
                     <li>
-                        <Link href="#" class="nav-link px-0 align-middle text-white">
+                        <Link to="/profile" class="nav-link px-0 align-middle text-white">
                             <i class="fs-4 bi-person"></i> <span class="ms-1 d-none d-sm-inline">Perfil</span></Link>
                     </li>
                    
@@ -35,7 +35,12 @@ function Dashboard() {
                 </ul>
             </div>
         </div>
-        
+        <div class="col p-0 m-0">
+            <div className='p-1 d-flex justify-content-center shadow'>
+                <h4>Concentración Deportiva Pichincha</h4>
+            </div>
+            <Outlet/>
+        </div>
     </div>
 </div>
     )

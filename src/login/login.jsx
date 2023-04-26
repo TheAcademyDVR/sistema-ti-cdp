@@ -41,7 +41,7 @@ function Login() {
                         showConfirmButton: false,
                         timer: 1000
                     })
-                    navigate('/dashboard');
+                    navigate('/');
                 } else {
                     // alert("Usuario o clave no existe");
                     // setError(res.data.Error);
